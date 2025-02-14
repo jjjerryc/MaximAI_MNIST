@@ -1,0 +1,57 @@
+2024-12-21 01:49:48,260 - Log file for this run: /home/jayson_c/Maxim/ai8x-training/logs/2024.12.21-014948/2024.12.21-014948.log
+2024-12-21 01:49:48,260 - Configuring device: MAX78002, simulate=True.
+2024-12-21 01:49:48,522 - => loading checkpoint mnist_Project/alexnet-mnist-qat8-q.pth.tar
+2024-12-21 01:49:48,526 - => Checkpoint contents:
++----------------------+-------------+---------+
+| Key                  | Type        | Value   |
+|----------------------+-------------+---------|
+| arch                 | str         | alexnet |
+| compression_sched    | dict        |         |
+| epoch                | int         | 199     |
+| extras               | dict        |         |
+| optimizer_state_dict | dict        |         |
+| optimizer_type       | type        | SGD     |
+| state_dict           | OrderedDict |         |
++----------------------+-------------+---------+
+
+2024-12-21 01:49:48,526 - => Checkpoint['extras'] contents:
++-----------------+--------+-------------------+
+| Key             | Type   | Value             |
+|-----------------+--------+-------------------|
+| best_epoch      | int    | 190               |
+| best_mAP        | int    | 0                 |
+| best_top1       | float  | 98.3              |
+| clipping_method | str    | MAX_BIT_SHIFT     |
+| current_mAP     | int    | 0                 |
+| current_top1    | float  | 97.98333333333333 |
++-----------------+--------+-------------------+
+
+2024-12-21 01:49:48,526 - Loaded compression schedule from checkpoint (epoch 199)
+2024-12-21 01:49:48,530 - => loaded 'state_dict' from checkpoint 'mnist_Project/alexnet-mnist-qat8-q.pth.tar'
+2024-12-21 01:49:48,533 - Optimizer Type: <class 'torch.optim.sgd.SGD'>
+2024-12-21 01:49:48,533 - Optimizer Args: {'lr': 0.1, 'momentum': 0.9, 'dampening': 0, 'weight_decay': 0.0001, 'nesterov': False, 'maximize': False, 'foreach': None, 'differentiable': False, 'fused': None}
+2024-12-21 01:49:48,905 - torch.compile() successful, mode=default, cache limit=8
+2024-12-21 01:49:48,905 - Dataset sizes:
+	test=10000
+2024-12-21 01:49:48,906 - --- test (ckpt) ---------------------
+2024-12-21 01:49:48,906 - 10000 samples (256 per mini-batch)
+2024-12-21 01:49:54,645 - Test: [   10/   40]    Loss 0.031022    Top1 99.140625    Top5 100.000000    
+2024-12-21 01:49:54,707 - Test: [   20/   40]    Loss 0.035701    Top1 98.964844    Top5 100.000000    
+2024-12-21 01:49:54,777 - Test: [   30/   40]    Loss 0.031929    Top1 98.984375    Top5 100.000000    
+2024-12-21 01:49:58,715 - Test: [   40/   40]    Loss 0.031804    Top1 98.960000    Top5 100.000000    
+2024-12-21 01:49:58,728 - ==> Top1: 98.960    Top5: 100.000    Loss: 0.032
+
+2024-12-21 01:49:58,729 - ==> Confusion:
+[[ 977    0    1    0    0    0    1    1    0    0]
+ [   0 1132    2    0    0    0    0    1    0    0]
+ [   2    5 1018    1    1    0    0    5    0    0]
+ [   1    0    0 1003    0    4    0    2    0    0]
+ [   0    1    1    0  970    0    0    0    2    8]
+ [   1    1    0    5    0  882    3    0    0    0]
+ [   1    5    2    0    0    1  948    0    1    0]
+ [   0    1    3    1    2    0    0 1021    0    0]
+ [   6    1    3    1    2    2    1    2  952    4]
+ [   0    0    0    2    6    2    0    5    1  993]]
+
+2024-12-21 01:49:58,730 - 
+2024-12-21 01:49:58,730 - Log file for this run: /home/jayson_c/Maxim/ai8x-training/logs/2024.12.21-014948/2024.12.21-014948.log

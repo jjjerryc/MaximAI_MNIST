@@ -1,0 +1,1 @@
+python train.py --lr 1e-3 --optimizer SGD --epochs 200 --deterministic --compress policies/schedule.yaml --model alexnet --dataset MNIST --confusion --param-hist --pr-curves --embedding --device MAX78002 "$@"

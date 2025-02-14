@@ -1,0 +1,1 @@
+./train.py --model alexnet --dataset MNIST --confusion --evaluate --exp-load-weights-from mnist_Project/alexnet-mnist-qat8-q.pth.tar -8 --device MAX78002 "$@"
